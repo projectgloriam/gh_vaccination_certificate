@@ -19,4 +19,9 @@ If it's the first time using the database (or like a factory reset), run `php ar
 Be sure to delete all folders in `storage\app\public` to remove any media.
 
 ### Run the app server
-Run `php artisan serve`
+Run `php artisan serve` and navigate to `http://localhost:8000/login`
+
+### Default Login
+Default login details will be 
+Email: `admin@ghanavaccination.com`
+Password: `admin`

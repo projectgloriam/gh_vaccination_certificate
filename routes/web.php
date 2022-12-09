@@ -18,10 +18,7 @@ use App\Http\Controllers\AdminController;
 |
 */
 
-Route::get('/', function () {
-    return view('login');
-});
-
+Route::get('/', [LoginController::class, 'login']);
 
 
 Route::resource('doses', DoseController::class)->middleware('auth');
