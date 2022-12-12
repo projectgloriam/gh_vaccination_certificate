@@ -10,6 +10,9 @@ The App uses Gmail to send alerts to clients. All you have to do is go to your G
 
 Upon creating a new vaccinated user, you'll be prompted for your Gmail email and password. Use the generated *App password* in place of your password.
 
+## PHP first time installation
+Install WAMP server from `https://www.wampserver.com/en/` and Composer from `https://getcomposer.org/download/`.
+
 ## How to setup
 Clone and navigate to the the application's directory `cd \gh_vaccination_certificate`.
 
@@ -17,6 +20,8 @@ Clone and navigate to the the application's directory `cd \gh_vaccination_certif
 If it's the first time using the database (or like a factory reset), run `php artisan migrate:fresh --seed`
 
 Be sure to delete all folders in `storage\app\public` to remove any media.
+
+Run `composer update` to install the app's dependencies.
 
 ### Run the app server
 Run `php artisan serve` and navigate to `http://localhost:8000/login`
