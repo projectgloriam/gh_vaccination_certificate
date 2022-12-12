@@ -17,11 +17,12 @@ Install WAMP server from `https://www.wampserver.com/en/` and Composer from `htt
 Clone and navigate to the the application's directory `cd \gh_vaccination_certificate`.
 
 ### First time use
-If it's the first time using the database (or like a factory reset), run `php artisan migrate:fresh --seed`
+Run `composer update` to install the app's dependencies. Also run `npm install` to install application frontend dependencies and build and version the assets for production... `npm run build`
 
-Be sure to delete all folders in `storage\app\public` to remove any media.
+Copy `.env.example` file and rename it to `.env` to get the default configuration. 
+Create a new file in the `database` folder and name it `database.sqlite` then run `php artisan migrate:fresh --seed`.
 
-Run `composer update` to install the app's dependencies.
+The `spatie/media-library` dependency has a bug. To avoid this issue, please copy `MediaCollection.php` from `public` folder and replace the same file at `C:\Users\fadom\source\repos\gh_vaccination_certificate\vendor\spatie\laravel-medialibrary\src\MediaCollections\Models\Collections`.
 
 ### Run the app server
 Run `php artisan serve` and navigate to `http://localhost:8000/login`
